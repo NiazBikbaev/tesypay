@@ -1,0 +1,48 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  quartz:
+    job-store-type: jdbc
+  resources:
+    add-mappings: false
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+oauth2:
+  clients:
+  - clientId: client_id
+    clientSecret: client_secret
+    scopes:
+    - payments
+    - scope
+    redirectUris:
+    - http://example.com
+    accessTokenValiditySeconds: 1800
+    authorizedGrantTypes:
+    - client_credentials
+
+testpay:
+  secret: secretWord
+  webHook:
+    readTimeout: 1000
+    connectionTimeout: 2000
+  job:
+    retryCount: 25
+    intervalInSeconds: 10368
+logging:
+  level:
+    org:
+      quartz: OFF
+
+---
+spring:
+  profiles: DEBUG
+
+testpay:
+  job:
+    retryCount: 5
+    intervalInSeconds: 10
+

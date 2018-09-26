@@ -1,0 +1,5 @@
+rootProject.name = 'testpay'
+include 'payment-api'
+include 'common'
+include 'webhook'
+
