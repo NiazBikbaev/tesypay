@@ -15,4 +15,4 @@ jobs:
     script: ./gradlew build -x test
   - stage: Test
     name: Test
-    script: ./gradlew test --stacktrace --debug
+    script: ./gradlew test
