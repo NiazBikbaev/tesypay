@@ -1,5 +1,4 @@
-spring:
-  resources:
-    add-mappings: false
 server:
   port: 8081
+testpay:
+  secretWord: secretWord
