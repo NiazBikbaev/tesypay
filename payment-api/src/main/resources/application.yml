@@ -6,8 +6,6 @@ server:
 spring:
   quartz:
     job-store-type: jdbc
-  resources:
-    add-mappings: false
   jackson:
     property-naming-strategy: SNAKE_CASE
 

@@ -33,7 +33,7 @@ public class PaymentController {
         this.paymentService = paymentService;
     }
 
-    @PostMapping(value = "/payment", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/payment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public PaymentDto createPayment(@RequestBody @Valid PaymentDto payment,
                                     BindingResult bindingResult) throws SchedulerException {
         if (bindingResult.hasErrors()) {
