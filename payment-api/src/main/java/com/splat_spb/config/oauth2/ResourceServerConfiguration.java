@@ -30,7 +30,6 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         http.exceptionHandling()
             .authenticationEntryPoint(authenticationEntryPoint);
         http.authorizeRequests()
-            .antMatchers("/payments/**").access("#oauth2.hasScope('payments')")
             .anyRequest().authenticated().and().csrf().disable();
 
     }
