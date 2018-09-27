@@ -4,6 +4,11 @@
 * payemnt-api - testpay service
 * webhook - callback service
 
+## Checksum algorithm
+The signature is constructed by performing an SHA-256 calculation on string build up by concatenating the fields sended to to webhook listener. Signature = SHA-256 (currency + amount + SHA-256(ASCII(secretWord)).toUpperCase + paymentId + externalId* + status)
+
+* if externalId is null, field skipped
+
 ## How to build
 
 ```gradlew build```
