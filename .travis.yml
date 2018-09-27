@@ -10,4 +10,4 @@ jobs:
     script: ./gradlew build -x test
   - stage: Test
     name: Test
-    script: ./gradlew test --stacktrace
+    script: ./gradlew test --stacktrace --debug
