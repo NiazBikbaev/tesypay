@@ -1,5 +1,10 @@
 language: java
 
+cache:
+  directories:
+    - .gradle
+    - build
+
 before_install:
 - chmod +x gradlew
 
